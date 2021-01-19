@@ -1,0 +1,26 @@
+.dog-item{
+  min-width: 90%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+mat-card {
+  width: 30vw;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+mat-card-header{
+  justify-content: center;
+}
+mat-card-content{
+  margin-top:2rem
+}
+
+button{
+  margin-top: 2rem;
+}
+
+.details{
+
+}

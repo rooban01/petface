@@ -1,0 +1,86 @@
+.section-packages {
+  grid-column: full-start / full-end;
+  display: grid;
+  background-color: $color-grey-light-1;
+  padding: 10rem 5vw;
+}
+
+.packages {
+  grid-column: center-start / center-end;
+  width: 60vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+
+  grid-gap: 7rem;
+
+}
+
+.package {
+  background-color: $color-grey-light-1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem;
+
+
+  &__img {
+
+    width: 100%;
+    height: 20rem; //heigt to remove if img size are ==
+    grid-row: 1/1;
+    grid-column: 1/-1;
+    z-index: 2;
+  }
+  &__like {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    fill: $color-primary;
+    height: 3rem;
+    width: 3rem;
+    z-index: 3;
+    justify-self: end;
+    margin: 1rem;
+  }
+  &__name {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    width: 80%;
+    justify-self: center;
+    align-self: end;
+    font-family: $font-display;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25;
+    background-color: $color-secondary;
+    color: $color-white;
+    font-weight: 400;
+    text-transform: uppercase;
+    transform: translateY(50%);
+    z-index: 4;
+  }
+  &__dog-type,
+  &__training-type {
+    margin-top: 2rem;
+  }
+  &__level,
+  &__dog-type,
+  &__training-type,
+  &__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    svg {
+      fill: $color-primary;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
+    }
+    p {
+    }
+  }
+}
+
+.btn-package {
+  grid-column: 1/-1;
+  height: 5rem !important;
+}

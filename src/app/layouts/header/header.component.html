@@ -1,0 +1,36 @@
+<div class="section-header">
+  <div class="profile">
+    <img
+      src="../../../assets/dog_lunettes_sm.jpg"
+      alt="dog"
+      class="profile__pictures profile__pictures__img--1"
+    />
+    <img
+      src="../../../assets/dog_listening.jpg"
+      alt="dog"
+      class="profile__pictures profile__pictures__img--2"
+    />
+  </div>
+
+  <div class="header">
+    <li  *ngIf ="!userIsAuthenticated" class="btn btn-primary btn-lg login" routerLinkActive="primary-activated"  routerLink="/login"><a >Login</a></li>
+    <li  *ngIf ="userIsAuthenticated" (click)= "onLogout()"  class="btn btn-primary btn-lg login" routerLinkActive="primary-activated"  routerLink="/home"><a >Logout</a></li>
+    <!-- <li><a routerLink="/register"   routerLinkActive="nav-activated">Register</a></li> -->
+    <h1 class="heading-1 header__title" >The ultimate personal freedom</h1>
+    <p class="header__presentation">View our propertiesf Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero ex harum iure exercitationem vitae expedita odit nostrum repudiandae a reiciendis, nemo porro eligendi tempora temporibus, distinctio autem consequuntur quas sapiente?</p>
+    <!-- <div class="header__seenon-text">Seen on</div> -->
+    <div class="header__menu-sub">
+      <ul>
+        <li *ngIf ="userIsAuthenticated" routerLink="/getDogsByUser"><a>My dogs</a></li>
+      </ul>
+      <ul>
+        <li *ngIf ="userIsAuthenticated"><a>Veterinaire</a></li>
+      </ul>
+      <ul>
+        <li *ngIf ="userIsAuthenticated"><a>Training</a></li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+

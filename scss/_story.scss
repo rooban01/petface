@@ -1,0 +1,110 @@
+.story {
+  // grid-column: full-start / col-end 6;
+
+  &__pictures {
+    grid-column: full-start/ col-end 6;
+    background-color: $color-secondary;
+    // background-image: linear-gradient(
+    //     rgba($color-primary, 0.5),
+    //     rgba($color-primary, 0.5)
+    //   ),
+    //   url(../img/back.jpg);
+    // background-size: cover;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    @media only screen and(max-width: $bp-medium) {
+      grid-column: 1/-1;
+      padding: 6rem;
+    }
+
+    &__img--1 {
+      width: 100%;
+      grid-row: 2/6;
+      grid-column: 2/6;
+      box-shadow: 0 2rem 5rem rgba($story_box_shadow, 0.2);
+      @media only screen and (max-width: $bp-medium) {
+        grid-column: 1 / 7;
+        grid-row: 1 / -1;
+      }
+    }
+    &__img--2 {
+      width: 115%;
+      width: 100%;
+      grid-row: 4/6;
+      grid-column: 4/7;
+      z-index: 200;
+      box-shadow: 0 2rem 5rem rgba($story_box_shadow, 0.6);
+      @media only screen and (max-width: $bp-medium) {
+        grid-row: 1 / span -2;
+        width: 100%;
+      }
+    }
+  }
+  &__content {
+
+    grid-column: col-start 7 / full-end;
+    background-color:$color-secondary;
+    padding: 1rem 5vw;
+
+    // display: flex
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: start;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-rows: repeat(2, 1fr);
+      grid-column: 1 / -1;
+      grid-row: 4 / 7;
+    }
+  }
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+  }
+}
+.section-story{
+  display: grid;
+  grid-template-rows: 40vw;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start]repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+    [center-end] 1fr [full-end];
+  @media only screen and(max-width: $bp-large) {
+    grid-template-rows: 70vw;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start]repeat(
+        12,
+        [col-start] minmax(min-content, 9.5rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+  }
+
+
+
+
+  @media only screen and(max-width: $bp-medium) {
+    //  grid-template-rows: 100vh min-content min-content min-content repeat(3, min-content);
+    grid-template-rows: 70vw;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start]repeat(
+        12,
+        [col-start] minmax(min-content, 9.5rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+
+  }
+
+}
+
+
+
+
+

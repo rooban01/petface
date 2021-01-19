@@ -1,0 +1,38 @@
+
+<app-menu></app-menu>
+<div class="dog-item" *ngFor="let data of datas">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{data.lastname}} {{data.firstname}}</mat-card-title>
+      <mat-card-subtitle>{{data.race}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-tab-group  mat-align-tabs="center" animationDuration="1000ms">
+      <mat-tab label="First"  class="dog-img">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+     </mat-tab>
+      <mat-tab label="Second">
+        <img class="dog-img" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      </mat-tab>
+      <mat-tab label="Third"  class="dog-img">
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      </mat-tab>
+    </mat-tab-group>
+
+
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button mat-raised-button color="primary">EDIT</button>
+      <button mat-button mat-raised-button color="warn">DELET</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,39 @@
+.section-contact{
+  min-height: 90vh;
+  margin-top:10rem;
+}
+
+
+
+.contact{
+  margin: auto auto ;
+  width: 60vw;
+
+  @media only screen and(max-width: $bp-medium) {
+    width: 80vw;
+  }
+
+  @media only screen and(max-width: $bp-small) {
+    width: 90%;
+  }
+
+
+
+}
+
+
+.mat-box{
+
+  width: 40vw;
+
+  margin: auto auto;
+  @media only screen and(max-width: $bp-medium) {
+    width: 90%;
+    margin: auto auto;
+  }
+
+ }
+
+
+
+

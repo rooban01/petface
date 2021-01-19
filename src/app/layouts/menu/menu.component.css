@@ -1,0 +1,34 @@
+mat-toolbar{
+
+background-color: #c69963;
+  z-index: 1000;
+  height: 8rem;
+}
+a:hover,
+a:active{
+ color: lightgray;
+}
+
+
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+.navigation-items{
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+.nav-caption{
+  display: inline-block;
+  padding-left: 6px ;
+}
+
+.nav-activated{
+  color: lightgray;
+}

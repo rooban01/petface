@@ -1,0 +1,97 @@
+.header {
+  background-color: $color-grey-dark-1;
+  grid-column: col-start 5 / full-end;
+  padding: 2rem;
+
+  display: grid;
+  grid-template-rows: 1fr  2rem 5rem 2rem  1fr;
+  grid-template-columns: minmx(min-content, max-content);
+  grid-row-gap: 1.5rem;
+  padding-top: 5rem;
+  @media only screen and(max-width: $bp-medium) {
+    grid-column: 1/-1;
+  }
+  @media only screen and(max-width: $bp-small) {
+
+  }
+
+
+
+
+//   &-btn {
+// display:grid;
+//  grid-column: 1fr;
+//      grid-column: 2/ span 1;
+//      grid-row: 1/span 1;
+//     height: 3rem;
+//     justify-self: center;
+//     font-size: 2rem;
+
+//   }
+  &__title{
+    grid-template-columns: 1fr;
+    grid-row: 2/span 1;
+   height: 3rem;
+   justify-self: start;
+   font-size: 2rem;
+  }
+  &__presentation{
+display:grid;
+    grid-template-columns: 1fr min-content ;
+    grid-row: 4/span 1;
+    height: 2rem;
+    //justify-self: center;
+    font-size: 2rem;
+
+  }
+
+  &__menu-sub {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 1fr);
+    grid-row: 6/span 1;
+    margin-left: 5vw;
+    height:10rem;
+
+
+    justify-content: center;
+    align-items: center;
+   }
+}
+
+
+
+
+
+
+
+.section-header{
+  display: grid;
+  grid-template-rows: 40vw;
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start]repeat(12, [col-start] minmax(min-content, 9.5rem) [col-end])
+    [center-end] 1fr [full-end];
+  @media only screen and(max-width: $bp-large) {
+    grid-template-rows: 70vh;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start]repeat(
+        12,
+        [col-start] minmax(min-content, 9.5rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+  }
+
+
+  @media only screen and(max-width: $bp-medium) {
+    //  grid-template-rows: 100vh min-content min-content min-content repeat(3, min-content);
+    grid-template-rows: 60vh;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr)
+      [center-start]repeat(
+        12,
+        [col-start] minmax(min-content, 9.5rem) [col-end]
+      )
+      [center-end] 1fr [full-end];
+  }
+}

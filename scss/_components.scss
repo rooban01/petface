@@ -1,0 +1,43 @@
+.btn {
+  border-radius: 0;
+  border: none;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: $color-primary-dark;
+  }
+}
+
+.btn-primary {
+  background-color: $color-primary;
+  color: #fff;
+  padding: 1.8rem 3rem;
+}
+.btn-white {
+  color: #fff;
+}
+
+
+.btn-lg {
+  width: 25rem;
+  height: 5rem;
+  align-items: center;
+}
+
+.btn-md {
+  width: 10rem;
+  height: 4rem;
+}
+
+.btn-sm {
+  width: 8rem;
+  height: 3rem;
+}
+
+.primary-activated{
+  background-color: $color-primary-dark;
+}

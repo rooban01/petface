@@ -1,0 +1,33 @@
+<app-menu></app-menu>
+
+<!-- <div class="card"> -->
+ <div class="dogs-list" >
+<div *ngFor ="let dog of dogs" >
+
+
+      <div class="dog-item" *ngIf="userIsAuthenticated && userId==dog.id_user" >
+        <div class="dog-item__content"  routerLink="/dog/{{ dog.id_dog }}">
+          <div class="dog-item__image">
+            <div class="avatar ">
+               <img
+                 src="../../../assets/dog_listening.jpg"
+                alt="#"
+
+              />
+            </div>
+          </div>
+          <div class="dog-item__info">
+            <h2>{{dog.firstname}} {{dog.lastname}}</h2>
+            <p></p>
+         </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+<!-- </div> -->
+
